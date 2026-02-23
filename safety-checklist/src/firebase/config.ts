@@ -3,7 +3,10 @@ import { getAuth, type Auth } from 'firebase/auth';
 import { getFirestore, type Firestore } from 'firebase/firestore';
 import { getStorage, type FirebaseStorage } from 'firebase/storage';
 
-export const IS_MOCK = import.meta.env.VITE_USE_MOCK === 'true';
+// Firebase API key가 없으면 자동으로 Mock 모드 사용
+export const IS_MOCK =
+  import.meta.env.VITE_USE_MOCK === 'true' ||
+  !import.meta.env.VITE_FIREBASE_API_KEY;
 
 let auth: Auth;
 let db: Firestore;
