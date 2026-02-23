@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd safety-checklist && npm install && npm run build",
+  "outputDirectory": "safety-checklist/dist",
+  "installCommand": "echo skip",
+  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
+}
