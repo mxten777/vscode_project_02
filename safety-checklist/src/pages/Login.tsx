@@ -25,7 +25,7 @@ export default function LoginPage() {
   return (
     <div className="min-h-screen flex">
       {/* Left brand panel */}
-      <div className="hidden lg:flex lg:w-[480px] xl:w-[560px] flex-col bg-[#0f172a] relative overflow-hidden flex-shrink-0">
+      <div className="hidden md:flex md:w-[420px] lg:w-[480px] xl:w-[560px] flex-col bg-[#0f172a] relative overflow-hidden flex-shrink-0">
         {/* background decoration */}
         <div className="absolute inset-0">
           <div className="absolute top-[-120px] left-[-80px] w-[420px] h-[420px] bg-indigo-600/20 rounded-full blur-[80px]" />
@@ -77,7 +77,7 @@ export default function LoginPage() {
       <div className="flex-1 bg-slate-50 flex items-center justify-center p-6">
         <div className="w-full max-w-sm animate-slide-up">
           {/* Mobile logo */}
-          <div className="lg:hidden flex items-center justify-center gap-2.5 mb-8">
+          <div className="md:hidden flex items-center justify-center gap-2.5 mb-8">
             <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center">
               <ShieldCheckIcon className="w-6 h-6 text-white" />
             </div>
@@ -98,6 +98,7 @@ export default function LoginPage() {
                   type="email"
                   className="input-field pl-10"
                   placeholder="example@email.com"
+                  defaultValue="jngdy@naver.com"
                   {...register('email', { required: '이메일을 입력하세요' })}
                 />
               </div>
